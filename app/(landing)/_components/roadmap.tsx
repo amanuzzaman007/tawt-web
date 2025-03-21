@@ -31,7 +31,7 @@ export default function Roadmap() {
         </p>
         <div className="flex flex-col items-center relative py-4">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-500"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#948AE9]"></div>
 
           {roadmapSteps.map((step, index) => (
             <div
@@ -77,7 +77,7 @@ export default function Roadmap() {
 
           {/* Arrow at Bottom */}
           <div className="mt-6">
-            <div className="w-0 h-0 border-l-8 border-r-8 border-t-[16px] border-l-transparent border-r-transparent border-green-500"></div>
+            <div className="w-0 h-0 border-l-8 border-r-8 border-t-[16px] border-l-transparent border-r-transparent border-[#948AE9]"></div>
           </div>
         </div>{" "}
       </div>

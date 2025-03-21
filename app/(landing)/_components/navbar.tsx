@@ -46,7 +46,7 @@ const MainNavbar = () => {
     <div className="sticky top-0 w-full text-white bg-white z-50">
       <div className="max-w-[1440px] mx-auto py-6 px-6 flex items-center justify-between space-x-4 w-full">
         <div>
-          <p className="font-bold italic text-2xl text-purple-500">TAWT</p>
+          <p className="font-bold italic text-2xl text-[#212ce6]">TAWT</p>
         </div>
         <div className="space-x-2">
           {sections.map((section) => (

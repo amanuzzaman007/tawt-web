@@ -24,7 +24,7 @@ const buttonVariants = cva(
           "bg-indigo-500 text-primary-foreground hover:bg-indigo-500/90 border-indigo-600 border-b-4 active:border-b-0",
         superOutline: "bg-white text-indigo-500 hover:bg-slate-100",
         ghost:
-          "bg-transparent text-slate-300 border-transparent border-0 hover:bg-slate-100 hover:text-slate-800",
+          "bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100 hover:text-slate-800",
         sidebar:
           "bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 transition-none",
         sidebarOutline:
