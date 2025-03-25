@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { BellIcon } from "lucide-react";
+import { BellIcon, MenuIcon } from "lucide-react";
 import { useState } from "react";
+import SideNav from "./side-nav";
 
 export type SectionType =
   | "home"
@@ -45,10 +46,17 @@ const MainNavbar = () => {
   return (
     <div className="sticky top-0 w-full text-white bg-white z-50">
       <div className="max-w-[1440px] mx-auto py-6 px-6 flex items-center justify-between space-x-4 w-full">
-        <div>
+        <div className="block lg:hidden">
+          <SideNav>
+            <Button size={"icon"}>
+              <MenuIcon />
+            </Button>
+          </SideNav>
+        </div>
+        <div className="hidden lg:block">
           <p className="font-bold italic text-2xl text-[#212ce6]">TAWT</p>
         </div>
-        <div className="space-x-2">
+        <div className="space-x-2 hidden lg:block">
           {sections.map((section) => (
             <Button
               key={section}

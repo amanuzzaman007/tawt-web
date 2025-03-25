@@ -214,7 +214,7 @@ function TokenDistributions() {
         <h2 className="text-slate-500 text-2xl font-bold">
           Allocation of Tokens in %
         </h2>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col lg:flex-row items-center gap-6">
           <ChartContainer
             config={chartConfig}
             className="mx-auto aspect-square h-[390px]"
@@ -249,15 +249,27 @@ function TokenDistributions() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-y-6 gap-x-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-4 mt-6">
         {chartData.map((item) => (
           <div key={item.name} className="flex flex-col gap-4">
             <h3 className="text-base font-bold text-[#212ce6]">{item.name}</h3>
             <div className="flex flex-col gap-2 text-sm">
-              <p className="text-muted-foreground">Allocation: {item.value}%</p>
-              <p className="text-muted-foreground">Tokens: {item.tokens}</p>
-              <p className="text-muted-foreground">Cliff: {item.cliff}</p>
-              <p className="text-muted-foreground">Vesting: {item.vesting}</p>
+              <p className="text-muted-foreground">
+                <span className="font-semibold text-slate-700">Allocation</span>
+                : {item.value}%
+              </p>
+              <p className="text-muted-foreground">
+                <span className="font-semibold text-slate-700">Tokens</span>:{" "}
+                {item.tokens}
+              </p>
+              <p className="text-muted-foreground">
+                <span className="font-semibold text-slate-700">Cliff</span>:{" "}
+                {item.cliff}
+              </p>
+              <p className="text-muted-foreground">
+                <span className="font-semibold text-slate-700">Vesting</span>:{" "}
+                {item.vesting}
+              </p>
             </div>
           </div>
         ))}

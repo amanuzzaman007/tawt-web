@@ -174,11 +174,11 @@ const pageData = [
 const Faqs = () => {
   return (
     <div className="w-full">
-      <div className="flex flex-col items-center justify-center gap-y-8 rounded-3xl p-6 w-full">
+      <div className="flex flex-col items-center justify-center gap-y-8 rounded-3xl p-4 lg:p-6 w-full">
         <div className="flex flex-col items-center justify-center gap-y-8 w-full">
           <SectionTitle title="Investor FAQs & Contact Support" />
 
-          <div className="rounded-3xl p-6 text-muted-foreground space-y-2 w-full">
+          <div className="rounded-3xl text-muted-foreground space-y-2 w-full">
             <Accordion type="single" collapsible className="w-full">
               {pageData.map((item) => (
                 <AccordionItem key={item.subtitle} value={item.subtitle}>

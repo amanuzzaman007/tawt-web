@@ -18,9 +18,9 @@ const HeroSection = () => {
 
   return (
     <div className="w-full flex gap-4 border rounded-xl">
-      <div className="flex flex-col items-center justify-center p-8">
+      <div className="flex flex-col items-center justify-center p-4 lg:p-8">
         <div className="space-y-4">
-          <h1 className="text-9xl bg-gradient-to-r from-[#212ce6] to-[#6268d9] bg-clip-text font-extrabold text-transparent">
+          <h1 className="text-7xl lg:text-9xl bg-gradient-to-r from-[#212ce6] to-[#6268d9] bg-clip-text font-extrabold text-transparent">
             TAWT
           </h1>
           <p className="mt-4 text-4xl text-muted-foreground">
@@ -35,7 +35,7 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-      <div className="w-full h-full">
+      <div className="w-full h-full hidden lg:block">
         <CustomLottie animationData={animationData} loop={true} />
       </div>
     </div>

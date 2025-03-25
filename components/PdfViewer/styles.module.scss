@@ -1,0 +1,77 @@
+.pdf_root {
+  background: #ececec;
+  padding-top: 50px;
+}
+
+.btn {
+  box-shadow: 0px 5px 9px rgba(88, 42, 251, 0.25);
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  padding: 6px 14px;
+  height: 35px;
+}
+
+.pdf_container {
+  margin: auto;
+  text-align: center;
+  height: 100vh;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.pdf_container [class~="react-pdf__Page"] {
+  width: max-content;
+  margin: auto;
+}
+
+.pdf_pages {
+  width: 300px;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  padding-top: 65px;
+}
+.left_page_item {
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.page_scroll_body {
+  height: calc(100vh - 146px);
+  min-height: 450px;
+}
+.pdf_renderer {
+  position: relative;
+}
+.pdf__options {
+  width: 300px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 999;
+  width: 100%;
+  background-color: #fff;
+}
+.options_btn {
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+.arrow_btn {
+  position: absolute;
+  top: 0px;
+  right: -40px;
+}

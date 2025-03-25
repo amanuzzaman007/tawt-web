@@ -22,7 +22,7 @@ const roadmapSteps = [
 
 export default function Roadmap() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full overflow-hidden">
       <SectionTitle title="Roadmap" />
       <div className="space-y-4">
         <p>

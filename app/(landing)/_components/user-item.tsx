@@ -12,11 +12,12 @@ type Props = {
 };
 
 const UserItem = ({ image, name, role, twitter }: Props) => {
+  console.log({ image });
   return (
     <div className="p-2 rounded-md w-full overflow-hidden border">
       <div className="aspect-[2/2.3] relative bg-slate-100">
         <Image
-          src={image ?? "/teams/placeholder.jpg"}
+          src={image ? image : "/teams/placeholder.jpg"}
           alt="Adnan Arshad"
           fill
           className="object-cover rounded-md"

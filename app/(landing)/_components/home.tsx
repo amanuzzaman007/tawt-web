@@ -51,6 +51,7 @@ const Home = () => {
 
             {section === "roadmap" && (
               <div className="pt-32">
+                {" "}
                 <Roadmap />
               </div>
             )}
@@ -68,7 +69,8 @@ const Home = () => {
 
             {section === "community" && (
               <div className="pt-32">
-                <JoinCommunity />
+                {" "}
+                <JoinCommunity />{" "}
               </div>
             )}
           </div>
