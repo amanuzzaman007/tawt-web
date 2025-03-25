@@ -151,10 +151,10 @@ export default function Page() {
                   <ArrowLeft /> Home
                 </Link>
               </Button> */}
-              <h1 className="text-5xl font-bold text-[#212ce6] tracking-wide">
+              <h1 className="text-3xl lg:text-5xl font-bold text-[#212ce6] tracking-wide">
                 Investor Dataroom
               </h1>
-              <p className="text-center text-3xl text-[#212ce6] font-semibold">{`Welcome to Simplitaught's Investor Dataroom`}</p>
+              <p className="text-center text-xl lg:text-3xl text-[#212ce6] font-semibold">{`Welcome to Simplitaught's Investor Dataroom`}</p>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ export default function Page() {
                   {group.docs.map((doc) => (
                     <div
                       key={doc.id}
-                      className="flex flex-col w-full items-center gap-4 p-4 rounded-md border bg-indigo-100 text-indigo-500 text-xl font-semibold"
+                      className="flex flex-col w-full items-center gap-4 p-4 rounded-md border bg-indigo-100 text-indigo-500 text-base lg:text-xl font-semibold"
                     >
                       <div className="flex items-center gap-2">
                         <Image
