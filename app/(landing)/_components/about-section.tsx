@@ -9,16 +9,16 @@ const AboutSection = () => {
       <SectionTitle title="About" />
       <div className="text-lg font-medium text-muted-foreground space-y-6">
         <p>
-          SimpliTaught Coin (TAWT) is a cryptocurrency designed specifically for
-          the SimpliTaught ecosystem, which aims to revolutionize the education
-          and learning industry. Built on the Solana blockchain, SIMF serves as
-          a utility token that facilitates payments for educational resources
-          such as books and subscriptions, while also rewarding students and
-          educators for their engagement within the platform. The mission of
-          SimpliTaught Coin (TAWT) is to create an accessible, decentralized
-          learning economy where participants can benefit from a transparent and
-          efficient transaction system, ultimately enhancing educational
-          opportunities globally.
+          SimpliTaught Token (TAWT) is a cryptocurrency designed specifically
+          for the SimpliTaught ecosystem, which aims to revolutionize the
+          education and learning industry. Built on the Solana blockchain, TAWT
+          serves as a utility token that facilitates payments for educational
+          resources such as books and subscriptions, while also rewarding
+          students and educators for their engagement within the platform. The
+          mission of SimpliTaught Token (TAWT) is to create an accessible,
+          decentralized learning economy where participants can benefit from a
+          transparent and efficient transaction system, ultimately enhancing
+          educational opportunities globally.
         </p>
 
         <div className="space-y-2">
@@ -30,7 +30,7 @@ const AboutSection = () => {
             high costs, lack of personalized learning experiences, and poor
             financial transaction systems. Many students struggle to access
             quality educational materials and face significant barriers to
-            effective learning. SimpliTaught Coin (TAWT) addresses these
+            effective learning. SimpliTaught Token (TAWT) addresses these
             challenges by leveraging blockchain technology to reduce transaction
             costs and enable quick, secure payments. The integration of AI also
             personalizes learning experiences, ensuring that students receive
@@ -43,12 +43,12 @@ const AboutSection = () => {
             Vision & Mission Statement
           </h2>
           <p>
-            The vision of SimpliTaught Coin (TAWT) and the SimpliTaught platform
-            is to establish a global, blockchain-powered education ecosystem
-            that democratizes access to quality learning opportunities. The
-            guiding mission is to empower learners and educators through
-            innovative technology and decentralized solutions, creating a
-            sustainable and rewarding educational environment for all
+            The vision of SimpliTaught Token (TAWT) and the SimpliTaught
+            platform is to establish a global, blockchain-powered education
+            ecosystem that democratizes access to quality learning
+            opportunities. The guiding mission is to empower learners and
+            educators through innovative technology and decentralized solutions,
+            creating a sustainable and rewarding educational environment for all
             participants.
           </p>
         </div>
@@ -58,7 +58,7 @@ const AboutSection = () => {
             Summary of Token Utility & Economic Benefits
           </h2>
           <p>
-            SimpliTaught Coin (TAWT) has multiple use cases within the
+            SimpliTaught Token (TAWT) has multiple use cases within the
             SimpliTaught ecosystem:
           </p>
           <ul className="pl-6 space-y-2">

@@ -1,23 +1,15 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 import AboutSection from "./about-section";
-import CarouselTeams from "./carousel-teams";
 import Faqs from "./faqs";
 import HeroSection from "./hero-section";
 import JoinCommunity from "./join-community";
 import { sections } from "./navbar";
 import Roadmap from "./roadmap";
+import SlickGridSlider from "./slick-grid-slider";
 import TokenomicsAndFinancials from "./tokenomics-financial";
 
 const Home = () => {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    console.log(pathname);
-  }, [pathname]);
-
   return (
     <div className="">
       {sections.map((section) => (
@@ -58,16 +50,16 @@ const Home = () => {
 
             {section === "team" && (
               <div className="pt-32">
-                <CarouselTeams />
+                <SlickGridSlider />
               </div>
             )}
-            {section === "faqs" && (
+            {section === "faqs & community" && (
               <div className="pt-32">
                 <Faqs />
               </div>
             )}
 
-            {section === "community" && (
+            {section === "faqs & community" && (
               <div className="pt-32">
                 {" "}
                 <JoinCommunity />{" "}

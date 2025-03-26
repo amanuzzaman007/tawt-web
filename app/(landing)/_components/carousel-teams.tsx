@@ -26,7 +26,7 @@ const teams = [
       name: "Adnan Arshad",
       role: "Head of Product",
       twitter: "https://www.linkedin.com/in/muhammad-adnan-arshad-9a6a5937",
-      image: "/teams/webp/ARP07032.webp",
+      image: "/teams/webp/ARP07140.webp",
     },
     second_row: {
       name: "Zarmeen Iqbal",
@@ -95,7 +95,7 @@ const teams = [
 
 function CarouselTeams() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto space-y-8">
+    <div className="relative w-full max-w-5xl mx-auto space-y-8">
       <SectionTitle title="Teams" />
       <Carousel>
         <CarouselContent className="-ml-4">

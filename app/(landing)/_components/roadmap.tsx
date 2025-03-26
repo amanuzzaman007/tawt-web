@@ -46,7 +46,7 @@ export default function Roadmap() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="w-1/2 flex justify-end pr-10"
                 >
-                  <div className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg w-max">
+                  <div className="bg-blue-600 text-white font-semibold p-2 lg:px-6 lg:py-3  text-sm lg:text-base rounded-lg shadow-lg w-max">
                     {step.text}
                   </div>
                 </motion.div>
@@ -65,7 +65,7 @@ export default function Roadmap() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="w-1/2 flex justify-start pl-10"
                 >
-                  <div className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg w-max">
+                  <div className="bg-blue-600 text-white font-semibold p-2 lg:px-6 lg:py-3  text-sm lg:text-base rounded-lg shadow-lg w-max">
                     {step.text}
                   </div>
                 </motion.div>

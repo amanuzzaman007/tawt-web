@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { BellIcon, MenuIcon } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideNav from "./side-nav";
 
 export type SectionType =
@@ -11,8 +11,7 @@ export type SectionType =
   | "tokenomics"
   | "roadmap"
   | "team"
-  | "faqs"
-  | "community";
+  | "faqs & community";
 
 export const sections: SectionType[] = [
   "home",
@@ -20,18 +19,37 @@ export const sections: SectionType[] = [
   "tokenomics",
   "roadmap",
   "team",
-  "faqs",
-  "community",
+  "faqs & community",
 ];
 
 const MainNavbar = () => {
   const [activeSection, setActiveSection] = useState<SectionType>("home");
 
   const scrollToSection = (section: SectionType) => {
-    console.log({ section });
     setActiveSection(section);
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = "";
+      sections.forEach((section) => {
+        const sectionElement = document.getElementById(section);
+        if (sectionElement) {
+          const sectionTop = sectionElement.offsetTop - 60;
+          if (window.scrollY >= sectionTop) {
+            currentSection = section;
+          }
+        }
+      });
+      if (currentSection) {
+        setActiveSection(currentSection as SectionType);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // const navItems = [
   //   { name: "Home", url: "#Home" },

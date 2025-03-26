@@ -8,6 +8,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import Image from "next/image";
+import { TokenomicsModal } from "./tokenomics-modal";
 const chartData = [
   {
     name: "Founders",
@@ -17,6 +19,7 @@ const chartData = [
     tokens: "300M",
     cliff: "9 months",
     vesting: "linear vesting over 36 months",
+    icon: "/tokenomics-icons/founder.png",
   },
   {
     name: "Reserve",
@@ -42,6 +45,7 @@ const chartData = [
         300M tokens are fully
         distributed.
     `,
+    icon: "/tokenomics-icons/reserve.png",
   },
   {
     name: "Staking Reward",
@@ -51,6 +55,7 @@ const chartData = [
     tokens: "300M",
     cliff: "Released as per actual earning",
     vesting: "N/A",
+    icon: "/tokenomics-icons/stake.png",
   },
   {
     name: "Reward Pool",
@@ -60,6 +65,7 @@ const chartData = [
     tokens: "220M",
     cliff: "No cliff",
     vesting: "N/A",
+    icon: "/tokenomics-icons/trophy.png",
   },
   {
     name: "Marketing",
@@ -69,6 +75,7 @@ const chartData = [
     tokens: "200M",
     cliff: "3 months",
     vesting: "linear vesting over 4 months",
+    icon: "/tokenomics-icons/social-media.png",
   },
   {
     name: "Public",
@@ -78,6 +85,7 @@ const chartData = [
     tokens: "120M",
     cliff: "6 months",
     vesting: "linear vesting over 12 months",
+    icon: "/tokenomics-icons/feedback.png",
   },
   {
     name: "Ecosystem",
@@ -95,6 +103,7 @@ const chartData = [
         month until all 100M
         tokens are fully
         distributed.`,
+    icon: "/tokenomics-icons/entrepreneurship.png",
   },
   {
     name: "Private",
@@ -104,6 +113,7 @@ const chartData = [
     tokens: "100M",
     cliff: "1 months",
     vesting: "linear vesting over 3 months",
+    icon: "/tokenomics-icons/privacy-policy.png",
   },
   {
     name: "Seed",
@@ -113,6 +123,7 @@ const chartData = [
     tokens: "100M",
     cliff: "3 months",
     vesting: "linear vesting over 4 months",
+    icon: "/tokenomics-icons/sunflower-seed.png",
   },
   {
     name: "Team",
@@ -122,6 +133,7 @@ const chartData = [
     tokens: "100M",
     cliff: "12 months",
     vesting: "linear vesting over 24 months",
+    icon: "/tokenomics-icons/team.png",
   },
   {
     name: "DEX Liquidity",
@@ -131,6 +143,7 @@ const chartData = [
     tokens: "60M",
     cliff: "No cliff",
     vesting: "No lookup",
+    icon: "/tokenomics-icons/liquidity.png",
   },
   {
     name: "Pre-seed",
@@ -140,6 +153,7 @@ const chartData = [
     tokens: "60M",
     cliff: "3 months",
     vesting: "linear vesting over 6 months",
+    icon: "/tokenomics-icons/growing-seed.png",
   },
   {
     name: "Advisors",
@@ -149,6 +163,7 @@ const chartData = [
     tokens: "40M",
     cliff: "3 months",
     vesting: "linear vesting over 6 months",
+    icon: "/tokenomics-icons/conversation.png",
   },
 ];
 
@@ -210,7 +225,7 @@ const chartConfig = {
 function TokenDistributions() {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center p-4 lg:p-6">
         <h2 className="text-slate-500 text-2xl font-bold">
           Allocation of Tokens in %
         </h2>
@@ -249,30 +264,57 @@ function TokenDistributions() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-4 mt-6">
-        {chartData.map((item) => (
-          <div key={item.name} className="flex flex-col gap-4">
-            <h3 className="text-base font-bold text-[#212ce6]">{item.name}</h3>
-            <div className="flex flex-col gap-2 text-sm">
-              <p className="text-muted-foreground">
-                <span className="font-semibold text-slate-700">Allocation</span>
-                : {item.value}%
-              </p>
-              <p className="text-muted-foreground">
-                <span className="font-semibold text-slate-700">Tokens</span>:{" "}
-                {item.tokens}
-              </p>
-              <p className="text-muted-foreground">
-                <span className="font-semibold text-slate-700">Cliff</span>:{" "}
-                {item.cliff}
-              </p>
-              <p className="text-muted-foreground">
-                <span className="font-semibold text-slate-700">Vesting</span>:{" "}
-                {item.vesting}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className="p-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+          {chartData.map((item) => (
+            <TokenomicsModal key={item.name} {...item}>
+              <div
+                key={item.name}
+                className="flex flex-col gap-4 shadow justify-center p-4 border rounded-md overflow-hidden cursor-pointer hover:bg-slate-100 transition-all hover:scale-105"
+                role="button"
+              >
+                <div className="flex items-center justify-center w-full">
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    className="mb-4"
+                    width={64}
+                    height={64}
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-base font-bold text-[#212ce6]">
+                  {item.name}
+                </h3>
+                <div className="flex flex-col gap-2 text-sm">
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-slate-700">
+                      Allocation
+                    </span>
+                    : {item.value}%
+                  </p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-slate-700">Tokens</span>
+                    : {item.tokens}
+                  </p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-slate-700">Cliff</span>:{" "}
+                    {item.cliff}
+                  </p>
+                  <p className="text-muted-foreground flex items-start gap-2">
+                    <span className="font-semibold text-slate-700 shrink-0">
+                      Vesting:
+                    </span>
+
+                    <p className="shrink-0 flex-1 truncate">
+                      {item.vesting.slice(0, 200)}
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </TokenomicsModal>
+          ))}
+        </div>
       </div>
     </div>
   );
