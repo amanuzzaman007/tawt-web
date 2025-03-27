@@ -33,7 +33,7 @@ const documents = [
     id: 7,
     name: "Tech Architecture",
     icon: "/icons/laptop.png",
-    link: "/file_links/SimpliTaught_Tech_Architecture.pdf",
+    link: "/file_links/SimpliTaught Tech Architecture.pdf",
   },
   {
     id: 3,
