@@ -6,34 +6,28 @@ import Image from "next/image";
 
 const documents = [
   {
+    id: 5,
+    name: "Whitepaper",
+    icon: "/icons/bar-graph.png",
+    link: "/file_links/TAWT Whitepaper.pdf",
+  },
+  {
     id: 1,
     name: "Coin Overview",
     icon: "/icons/google-docs.png",
-    link: "/file_links/Pitch Deck.pdf",
+    link: "/file_links/TAWT Coin Overview.pdf",
   },
   {
     id: 4,
     name: "Investor Deck",
     icon: "/icons/investor.png",
-    link: "/file_links/TAWT Whitepaper.pdf",
+    link: "/file_links/INV ST.pdf",
   },
   {
     id: 2,
-    name: "Revenue Model",
+    name: "Revenue and Opportunities",
     icon: "/icons/statistics.png",
-    link: "/file_links/Financial Projections.pdf",
-  },
-  {
-    id: 3,
-    name: "Simple Agreement for Future Token",
-    icon: "/icons/insurance.png",
-    link: "/file_links/TAWT Whitepaper.pdf",
-  },
-  {
-    id: 6,
-    name: "KYC/AML Policies",
-    icon: "/icons/shield.png",
-    link: "/file_links/KYC_AML_Policy.pdf",
+    link: "/file_links/Revenue and Opportunities.pdf",
   },
   {
     id: 7,
@@ -42,10 +36,16 @@ const documents = [
     link: "/file_links/SimpliTaught_Tech_Architecture.pdf",
   },
   {
-    id: 5,
-    name: "Tokenomics",
-    icon: "/icons/bar-graph.png",
-    link: "/file_links/TAWT Whitepaper.pdf",
+    id: 3,
+    name: "Simple Agreement for Future Token",
+    icon: "/icons/insurance.png",
+    link: "",
+  },
+  {
+    id: 6,
+    name: "KYC/AML Policies",
+    icon: "/icons/shield.png",
+    link: "/file_links/KYC_AML_Policy.pdf",
   },
 ];
 
@@ -133,15 +133,25 @@ export default function DataRoomPage() {
                     <h2 className="text-lg font-semibold">{doc.name}</h2>
                   </div>
 
-                  <Button variant={"primary"} className="w-full mt-4" asChild>
-                    <a
-                      href={doc.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {doc.link ? (
+                    <Button variant={"primary"} className="w-full mt-4" asChild>
+                      <a
+                        href={doc.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant={"primary"}
+                      className="w-full mt-4"
+                      disabled={true}
                     >
                       View
-                    </a>
-                  </Button>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

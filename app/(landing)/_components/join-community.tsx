@@ -12,19 +12,43 @@ const JoinCommunity = () => {
         <SectionTitle title="Join the community" />
         <div className="flex items-center justify-around w-full gap-10 max-w-lg">
           <Button size={"icon"} className="w-14 h-14">
-            <FaXTwitter style={{ width: "30px", height: "30px" }} />
+            <a
+              href="https://x.com/simplitaughtAI"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter style={{ width: "30px", height: "30px" }} />
+            </a>
           </Button>
 
           <Button size={"icon"} className="w-14 h-14">
-            <FaTelegramPlane style={{ width: "30px", height: "30px" }} />
+            <a
+              href="https://t.me/simplitaughtAI"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTelegramPlane style={{ width: "30px", height: "30px" }} />
+            </a>
           </Button>
 
           <Button size={"icon"} className="w-14 h-14">
-            <FaDiscord style={{ width: "30px", height: "30px" }} />
+            <a
+              href="https://discord.gg/S8YfN5hq"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord style={{ width: "30px", height: "30px" }} />
+            </a>
           </Button>
 
           <Button size={"icon"} className="w-14 h-14">
-            <FaFacebook style={{ width: "30px", height: "30px" }} />
+            <a
+              href="https://www.facebook.com/simplitaught"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook style={{ width: "30px", height: "30px" }} />
+            </a>
           </Button>
         </div>
       </div>

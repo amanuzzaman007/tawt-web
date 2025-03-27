@@ -19,8 +19,8 @@ const UserItem = ({ image, name, role, twitter }: Props) => {
           src={image ? image : "/teams/placeholder.jpg"}
           alt="Adnan Arshad"
           fill
-          className="object-cover rounded-md"
-          objectPosition="top"
+          className="object-cover rounded-md object-top"
+          sizes="100%"
         />
       </div>
       <h3 className="text-base font-bold text-foreground mt-1 truncate">

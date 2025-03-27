@@ -92,7 +92,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="py-10 text-center text-gray-400 text-sm">
-        <p>&copy; {new Date().getFullYear()} YourCoin. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} TAWT. All rights reserved.</p>
         <p>Privacy Policy | Terms & Conditions</p>
       </footer>
     </div>

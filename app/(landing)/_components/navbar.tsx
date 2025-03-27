@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { BellIcon, MenuIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import SideNav from "./side-nav";
 
@@ -89,15 +89,14 @@ const MainNavbar = () => {
             onNavtrigger={(navTitle) => scrollToSection(navTitle)}
           /> */}
         </div>
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <Button size={"icon"} variant={"secondary"} className="relative">
             <BellIcon />
             <span className="absolute -top-2 -right-1 bg-red-500 text-black rounded-full text-[10px] p-1 animate-bounce">
               30
             </span>
           </Button>
-          {/* <Button variant={"super"}>Learn to gain</Button> */}
-        </div>
+        </div> */}
       </div>
     </div>
   );

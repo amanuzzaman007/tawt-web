@@ -12,14 +12,15 @@ import "slick-carousel/slick/slick-theme.css";
 const teams = [
   {
     name: "Ali Rizvi",
-    role: "CEO of SimpliTaught",
-    twitter: "",
+    role: "Founder & CEO at Simplitaught",
+    twitter: "https://www.linkedin.com/in/ali-rizvi-76329a18/",
+    image: "/teams/webp/ali-rizvi.webp",
   },
   {
     name: "Adnan Arshad",
     role: "Head of Product",
     twitter: "https://www.linkedin.com/in/muhammad-adnan-arshad-9a6a5937",
-    image: "/teams/webp/ARP07140.webp",
+    image: "/teams/webp/adnan.webp",
   },
   {
     name: "Hafsah Naveed",
@@ -38,32 +39,28 @@ const teams = [
   {
     name: "Darren Thompson",
     role: "Head of Marketing",
-    twitter: "",
+    twitter: "https://www.linkedin.com/in/helpotherpeople/",
+    image: "/teams/webp/darren.webp",
   },
   {
     name: "Umair Amjad",
     role: "Head of Software Development",
-    twitter: "https://www.linkedin.com/in/umair-k-a1549047/",
+    twitter: "https://www.linkedin.com/in/umair-a-a1549047/",
     image: "/teams/webp/umair_amzad.webp",
   },
+
   {
-    name: "Muhammad Umar",
-    role: "Account Manager",
-    twitter: "https://www.linkedin.com/in/muhammad-umar-579155239/",
-    image: "/teams/webp/muhammad_umar.webp",
+    name: "Hafiz Tamoor Shehzad",
+    role: "AI & ML Researcher",
+    twitter: "http://www.linkedin.com/in/hafiz-tamoor-shehzad/",
+    image: "/teams/webp/taimoor.webp",
   },
 
   {
     name: "Zaman Hridoy",
     role: "Software Engineer",
-    twitter: "",
+    twitter: "https://www.linkedin.com/in/md-amanuzzaman-059214145/",
     image: "/teams/webp/zaman.jpg",
-  },
-  {
-    name: "Muhammad Huzaifa Bukhari",
-    role: "SQA Engineer",
-    twitter: "",
-    image: "/teams/webp/bukhari.webp",
   },
   {
     name: "ABU HURERAH",
@@ -78,11 +75,44 @@ const teams = [
     twitter: "https://www.linkedin.com/in/junaidsultan/",
     image: "/teams/webp/junaid.webp",
   },
+
   {
-    name: "Hafiz Tamoor Shehzad",
-    role: "AI & ML Researcher",
-    twitter: "http://www.linkedin.com/in/hafiz-tamoor-shehzad/",
-    image: "/teams/webp/taimoor.webp",
+    name: "Nabeel Mustafa",
+    role: "Content Curator",
+    twitter: "https://www.linkedin.com/in/nabeelmustafa20070001",
+    image: "/teams/webp/nabeel.webp",
+  },
+  {
+    name: "Khadija Jamil",
+    role: "Content Curator",
+    twitter: "https://www.linkedin.com/in/khadija-jamil-195904262",
+    image: "/teams/webp/khadija.webp",
+  },
+
+  {
+    name: "Muhammad Huzaifa Bukhari",
+    role: "SQA Engineer",
+    twitter: "https://www.linkedin.com/in/muhammadhuzaifabukhari/",
+    image: "/teams/webp/bukhari.webp",
+  },
+  {
+    name: "Muhammad Umar",
+    role: "Account Manager",
+    twitter: "https://www.linkedin.com/in/muhammad-umar-579155239/",
+    image: "/teams/webp/muhammad_umar.webp",
+  },
+
+  {
+    name: "Anzar Nawaiz",
+    role: "Content Curator",
+    twitter: "http://linkedin.com/in/anzar-nawaiz-999781218",
+    image: "/teams/webp/anzar.webp",
+  },
+  {
+    name: "Sara Mazhar",
+    role: "Content Curator",
+    twitter: "http://linkedin.com/in/sara-mazhar-094bab234",
+    image: "/teams/webp/sara.webp",
   },
 ];
 
@@ -104,6 +134,7 @@ function SlickGridSlider() {
     speed: 500,
     rows: 2,
     slidesPerRow: 2,
+    slidesToScroll: 4,
     responsive: [
       {
         breakpoint: 1024,
@@ -121,6 +152,7 @@ function SlickGridSlider() {
       },
     ],
   };
+
   return (
     <div className="relative w-full max-w-5xl mx-auto space-y-8">
       <SectionTitle title="Teams" />

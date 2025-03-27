@@ -13,13 +13,13 @@ import {
 const pageData = [
   {
     subtitle: "Expected Returns",
-    text: "Investors in SimpliFi Coin (TAWT) can anticipate returns based on several factors, including:",
+    text: "Investors in SimpliTaught Token (TAWT) can anticipate returns based on several factors, including:",
     list: [
       {
         key: "Initial Token Sale Price",
         value: (
           <>
-            The initial token price is set at $0.01, with projections indicating
+            The initial token price is set at $0.05, with projections indicating
             potential price appreciation as the platform gains traction.
           </>
         ),
@@ -144,7 +144,7 @@ const pageData = [
       },
       {
         key: "Phone",
-        value: "+1 (555) 123-4567",
+        value: "+1 (302)426-229",
       },
       {
         key: "Website",

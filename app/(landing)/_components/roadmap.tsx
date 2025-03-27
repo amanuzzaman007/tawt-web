@@ -5,7 +5,7 @@ const roadmapSteps = [
   { id: 1, text: "1. Pre-Seed Funding, Seed Funding & Private Sale" },
   {
     id: 2,
-    text: "2. Public Sale: Initial Coin Offering (ICO) / Initial DEX Offering (IDO) / Initial Exchange Offering (IEO)",
+    text: "2. Public Sale: Initial Token Offering (ICO) / Initial DEX Offering (IDO) / Initial Exchange Offering (IEO)",
   },
   { id: 3, text: "3. Token Listing on Major Exchanges" },
   { id: 4, text: "4. Liquidity Provisioning" },
@@ -18,6 +18,10 @@ const roadmapSteps = [
   { id: 11, text: "11. Strategic Partnerships & Institutional Investments" },
   { id: 12, text: "12. NFT and Metaverse Integrations" },
   { id: 13, text: "13. DAO Voting & Governance Events" },
+  { id: 14, text: "14. SimpliTaught" },
+  { id: 15, text: "15. Simpli-Degree" },
+  { id: 17, text: "17. Simpli-Recruit" },
+  { id: 18, text: "18. Educator as a Brand" },
 ];
 
 export default function Roadmap() {
@@ -26,7 +30,7 @@ export default function Roadmap() {
       <SectionTitle title="Roadmap" />
       <div className="space-y-4">
         <p>
-          Simplitaught Coin (TAWT) Exchange Listing, Public Sales, and Growth
+          Simplitaught Token (TAWT) Exchange Listing, Public Sales, and Growth
           Roadmap:
         </p>
         <div className="flex flex-col items-center relative py-4">
