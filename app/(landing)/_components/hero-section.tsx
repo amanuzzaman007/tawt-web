@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import animationData from "@/public/lottie-files/animation-1.json";
 import dynamic from "next/dynamic";
 // import { useRive } from "@rive-app/react-canvas";
@@ -30,9 +29,9 @@ const HeroSection = () => {
             Built on the Solana blockchain for lightning-fast transactions and
             ultra-low fees. Secure, scalable, and community-driven.
           </p>
-          <Button variant={"secondary"} size={"lg"}>
+          {/* <Button variant={"secondary"} size={"lg"}>
             Buy Now
-          </Button>
+          </Button> */}
         </div>
       </div>
       <div className="w-full h-full hidden lg:block">
