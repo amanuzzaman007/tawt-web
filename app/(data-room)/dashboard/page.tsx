@@ -9,7 +9,7 @@ const documents = [
     id: 5,
     name: "Whitepaper",
     icon: "/icons/bar-graph.png",
-    link: "/file_links/TAWT Whitepaper.pdf",
+    link: "/file_links/final-tawt-coin.pdf",
   },
   {
     id: 1,
