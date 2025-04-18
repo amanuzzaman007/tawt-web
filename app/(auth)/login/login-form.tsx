@@ -64,7 +64,7 @@ export function LoginForm() {
             setSuccess(data.success);
           }
         })
-        .catch(() => setError("Something went wrong."));
+        .catch(() => setError("Invalid email or password. Please try again."));
     });
   };
 

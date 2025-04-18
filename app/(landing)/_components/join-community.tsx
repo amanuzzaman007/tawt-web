@@ -33,7 +33,7 @@ const JoinCommunity = () => {
 
           <Button size={"icon"} className="w-14 h-14">
             <a
-              href="https://discord.gg/S8YfN5hq"
+              href="https://discord.com/users/simplitaught"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -43,7 +43,7 @@ const JoinCommunity = () => {
 
           <Button size={"icon"} className="w-14 h-14">
             <a
-              href="https://www.facebook.com/simplitaught"
+              href="https://www.facebook.com/simplitaughtAI"
               target="_blank"
               rel="noopener noreferrer"
             >

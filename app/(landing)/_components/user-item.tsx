@@ -17,7 +17,7 @@ const UserItem = ({ image, name, role, twitter }: Props) => {
       <div className="aspect-[2/2.5] relative bg-slate-100">
         <Image
           src={image ? image : "/teams/placeholder.jpg"}
-          alt="Adnan Arshad"
+          alt={name}
           fill
           className="object-cover rounded-md object-top"
           sizes="100%"

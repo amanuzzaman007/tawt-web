@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 // Your own logic for dealing with plaintext password strings; be careful!
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -15,21 +16,22 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       authorize: async (credentials) => {
         let user = null;
 
-        // logic to verify if the user exists
-        const res = await axios.post(
-          "https://stagingapi.simplitaught.com/token/login",
-          {
-            email: credentials.email,
-            password: credentials.password,
-          }
-        );
+        try {
+          // logic to verify if the user exists
+          const res = await axios.post(
+            "https://stagingapi.simplitaught.com/token/login",
+            {
+              email: credentials.email,
+              password: credentials.password,
+            }
+          );
 
-        user = res.data;
+          const decodedToken: any = jwtDecode(res.data.token);
 
-        if (!user) {
-          // No user found, so this is their first attempt to login
-          // Optionally, this is also the place you could do a user registration
-          throw new Error("Invalid credentials.");
+          user = decodedToken;
+        } catch (error) {
+          console.log(error);
+          new Error("Invalid email or password. Please try again.");
         }
 
         // return user object with their profile data

@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { StarHalfIcon } from "lucide-react";
 
+import { auth, signOut } from "@/auth";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 const documents = [
   {
@@ -84,7 +86,12 @@ const documents = [
 //   },
 // ];
 
-export default function DataRoomPage() {
+export default async function DataRoomPage() {
+  const session = await auth();
+
+  if (!session) {
+    return redirect("/login");
+  }
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* Navbar */}
@@ -99,6 +106,16 @@ export default function DataRoomPage() {
             <Search size={20} />
           </Button>
         </div> */}
+        <form
+          action={async () => {
+            "use server";
+            await signOut();
+          }}
+        >
+          <Button variant="primaryOutline" className="hover:bg-white/95">
+            Logout
+          </Button>
+        </form>
       </div>
 
       <div className="p-4 flex flex-col items-center justify-center gap-4 mt-6 pb-4">

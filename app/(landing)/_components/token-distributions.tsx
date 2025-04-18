@@ -306,9 +306,9 @@ function TokenDistributions() {
                       Vesting:
                     </span>
 
-                    <p className="shrink-0 flex-1 truncate">
+                    <div className="shrink-0 flex-1 truncate">
                       {item.vesting.slice(0, 200)}
-                    </p>
+                    </div>
                   </p>
                 </div>
               </div>

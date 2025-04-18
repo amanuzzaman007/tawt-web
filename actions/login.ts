@@ -1,7 +1,6 @@
 "use server";
 
 import { signIn } from "@/auth";
-import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { LoginSchema } from "@/schemas";
 import { AuthError } from "next-auth";
 import * as z from "zod";
@@ -18,7 +17,7 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
     await signIn("credentials", {
       email,
       password,
-      redirectTo: DEFAULT_LOGIN_REDIRECT,
+      redirectTo: "/dashboard",
     });
 
     return {
@@ -35,7 +34,7 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
           };
         default:
           return {
-            error: "Something went wrong!",
+            error: "Invalid email or password. Please try again.",
           };
       }
     }
