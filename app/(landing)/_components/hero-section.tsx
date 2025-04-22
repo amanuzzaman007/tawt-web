@@ -23,11 +23,18 @@ const HeroSection = () => {
             TAWT
           </h1>
           <p className="mt-4 text-4xl text-muted-foreground">
-            Revolutionizing the Future of Decentralized Finance
+            {`TAWT - Gamifying the Future of Learning`}
           </p>
-          <p className="mt-2 text-muted-foreground text-2xl">
-            Built on the Solana blockchain for lightning-fast transactions and
-            ultra-low fees. Secure, scalable, and community-driven.
+
+          <p className="mt-2 text-muted-foreground text-xl font-semibold">
+            {`Today's education technology
+            often falls short in making learning fun, engaging, and rewarding.
+            That's where TAWT Coin (TAWT) comes in.`}
+          </p>
+          <p className="mt-2 text-muted-foreground text-xl font-semibold">
+            Built on the lightning-fast, low-cost Solana blockchain, TAWT is the
+            utility token that powers the SimpliTaught ecosystem-bringing
+            secure, scalable, and decentralized transactions to education.
           </p>
           {/* <Button variant={"secondary"} size={"lg"}>
             Buy Now
