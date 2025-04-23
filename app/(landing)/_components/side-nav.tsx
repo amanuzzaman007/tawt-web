@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import { sections, SectionType } from "./navbar";
@@ -49,7 +50,19 @@ const SideNav = ({ isOpen, onClose }: Props) => {
       className="fixed inset-0 flex flex-col h-screen bg-white border-r gap-y-4 drop-shadow-lg overflow-hidden"
     >
       <div className="flex items-center justify-between gap-4 p-4  border-b">
-        <p className="text-xl text-[#212ce6] font-semibold text-center">TAWT</p>
+        <div className="flex items-center gap-2">
+          <Image
+            src={"/logo-square.png"}
+            alt="TAWT Coin"
+            width={50}
+            height={50}
+            priority
+          />
+          <p className="text-xl text-[#212ce6] font-semibold text-center">
+            TAWT
+          </p>
+        </div>
+
         <Button size={"icon"} onClick={onClose}>
           <FaAngleLeft />
         </Button>

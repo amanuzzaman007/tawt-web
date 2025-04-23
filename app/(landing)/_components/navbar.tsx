@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MenuIcon } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import SideNav from "./side-nav";
 
@@ -87,7 +88,16 @@ const MainNavbar = () => {
           <Separator />
         </div>
         <div className="hidden lg:block">
-          <p className="font-bold italic text-2xl text-[#212ce6]">TAWT</p>
+          <div className="flex items-center gap-2">
+            <Image
+              src={"/logo-square.png"}
+              alt="TAWT Coin"
+              width={50}
+              height={50}
+              priority
+            />
+            <p className="font-bold italic text-2xl text-[#212ce6]">TAWT</p>
+          </div>
         </div>
         <div className="space-x-2 hidden lg:block">
           {sections.map((section) => (
