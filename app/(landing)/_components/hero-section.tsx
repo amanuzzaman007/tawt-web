@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import animationData from "@/public/lottie-files/animation-1.json";
 import dynamic from "next/dynamic";
 // import { useRive } from "@rive-app/react-canvas";
@@ -36,9 +37,15 @@ const HeroSection = () => {
             utility token that powers the SimpliTaught ecosystem-bringing
             secure, scalable, and decentralized transactions to education.
           </p>
-          {/* <Button variant={"secondary"} size={"lg"}>
-            Buy Now
-          </Button> */}
+          <Button variant={"secondary"} size={"lg"} asChild>
+            <a
+              href=" https://www.pinksale.finance/solana/launchpad/E5GfpvbsUZ2pQ4RbC1E6KeZGjWh7N1LNEGE1uRABeV62"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy Now
+            </a>
+          </Button>
         </div>
       </div>
       <div className="w-full h-full hidden lg:block">
