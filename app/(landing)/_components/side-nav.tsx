@@ -52,7 +52,7 @@ const SideNav = ({ isOpen, onClose }: Props) => {
       <div className="flex items-center justify-between gap-4 p-4  border-b">
         <div className="flex items-center gap-2">
           <Image
-            src={"/logo-square.png"}
+            src={"/logo-gold.png"}
             alt="TAWT Coin"
             width={50}
             height={50}

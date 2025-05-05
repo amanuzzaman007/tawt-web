@@ -2,7 +2,7 @@
 
 import SectionTitle from "@/components/section-title";
 import { Button } from "@/components/ui/button";
-import { FaFacebook, FaTelegramPlane } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { FaDiscord, FaXTwitter } from "react-icons/fa6";
 
 const JoinCommunity = () => {
@@ -13,9 +13,10 @@ const JoinCommunity = () => {
         <div className="flex items-center justify-around w-full gap-10 max-w-lg">
           <Button size={"icon"} className="w-14 h-14">
             <a
-              href="https://x.com/simplitaughtAI"
+              href="https://x.com/TawtToken"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center"
             >
               <FaXTwitter style={{ width: "30px", height: "30px" }} />
             </a>
@@ -26,6 +27,7 @@ const JoinCommunity = () => {
               href="https://t.me/simplitaughtAI"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center"
             >
               <FaTelegramPlane style={{ width: "30px", height: "30px" }} />
             </a>
@@ -36,6 +38,7 @@ const JoinCommunity = () => {
               href="https://discord.com/users/simplitaught"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center"
             >
               <FaDiscord style={{ width: "30px", height: "30px" }} />
             </a>
@@ -43,9 +46,21 @@ const JoinCommunity = () => {
 
           <Button size={"icon"} className="w-14 h-14">
             <a
-              href="https://www.facebook.com/simplitaughtAI"
+              href="https://www.instagram.com/tawttoken/"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center"
+            >
+              <FaInstagram style={{ width: "30px", height: "30px" }} />
+            </a>
+          </Button>
+
+          <Button size={"icon"} className="w-14 h-14">
+            <a
+              href="https://www.facebook.com/tawttoken"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center"
             >
               <FaFacebook style={{ width: "30px", height: "30px" }} />
             </a>
