@@ -21,7 +21,7 @@ const HeroSection = () => {
     <div className="w-full flex gap-4 border rounded-xl mt-20 lg:mt-32">
       <div className="flex flex-col items-center justify-center p-4 lg:p-8">
         <div className="space-y-4">
-          <h1 className="text-7xl lg:text-9xl bg-gradient-to-r from-[#212ce6] to-[#6268d9] bg-clip-text font-extrabold text-transparent">
+          <h1 className="text-4xl lg:text-6xl bg-gradient-to-r from-[#212ce6] to-[#6268d9] bg-clip-text font-extrabold text-transparent">
             TAWT
           </h1>
           <p className="mt-4 text-4xl text-muted-foreground">
