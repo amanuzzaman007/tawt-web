@@ -15,11 +15,18 @@ const Home = () => {
       {sections.map((section) => (
         <section key={section} id={section}>
           {section === "home" && (
-            <div className="px-6">
-              <div className="max-w-[1240px] w-full mx-auto">
-                <HeroSection />
+            <>
+              <div className="px-6">
+                <div className="max-w-[1240px] w-full mx-auto">
+                  <HeroSection />
+                </div>
               </div>
-            </div>
+              {/* <div className="max-w-[1240px] w-full mx-auto px-6">
+                <div className="pt-32">
+                  <HowToBuy />
+                </div>
+              </div> */}
+            </>
           )}
 
           <div className="max-w-[1240px] w-full mx-auto px-6">
