@@ -231,6 +231,11 @@ function SlickGridSlider() {
 
   useEffect(() => {
     setDeviceWidth(window.innerWidth);
+    if (window.innerWidth > 600) {
+      setTeams(teams);
+    } else {
+      setTeams(teamInMobile);
+    }
     const handleResize = () => {
       setDeviceWidth(window.innerWidth);
       if (window.innerWidth > 600) {
