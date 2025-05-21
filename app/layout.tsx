@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const font = Quicksand({
@@ -21,6 +22,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics (GA4) */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-VXTS5ML8Z0`}
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VXTS5ML8Z0', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body className={`${font.variable} antialiased`}>{children}</body>
     </html>
   );
