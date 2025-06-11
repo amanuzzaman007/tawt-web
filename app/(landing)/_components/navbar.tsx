@@ -90,13 +90,13 @@ const MainNavbar = () => {
         <div className="hidden lg:block">
           <div className="flex items-center gap-2">
             <Image
-              src={"/logo-gold.png"}
+              src={"/logo.png"}
               alt="TAWT Coin"
-              width={50}
-              height={50}
+              width={55}
+              height={55}
               priority
+              className="object-contain"
             />
-            <p className="font-bold italic text-2xl text-[#212ce6]">TAWT</p>
           </div>
         </div>
         <div className="space-x-2 hidden lg:block">
